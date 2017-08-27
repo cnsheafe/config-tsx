@@ -18,7 +18,7 @@ appConfig.createTsConfig(__dirname, appSettings["output-dir"]);
 [Example with Webpack]
 -
 
-Source code can be found [here]("https://github.com/cnsheafe/react-from-scratch").
+Source code can be found [here](https://github.com/cnsheafe/react-from-scratch).
 
 ```javascript
 const appConfig = require("config-tsx");
