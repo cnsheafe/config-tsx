@@ -15,7 +15,7 @@ const appSettings = appConfig.createPaths(__dirname);
 appConfig.createTsConfig(__dirname, appSettings["output-dir"]);
 ```
 
-[Example with Webpack]
+Example with Webpack
 -
 
 Source code can be found [here](https://github.com/cnsheafe/react-from-scratch).
