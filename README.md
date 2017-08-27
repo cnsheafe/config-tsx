@@ -7,7 +7,6 @@ Usage
 -
 
 ```javascript
-
 npm install --save-dev config-tsx
 
 const appConfig = require("config-tsx");
@@ -16,8 +15,10 @@ const appSettings = appConfig.createPaths(__dirname);
 appConfig.createTsConfig(__dirname, appSettings["output-dir"]);
 ```
 
-[Example with Webpack]("https://github.com/cnsheafe/react-from-scratch")
+[Example with Webpack]
 -
+
+Source code can be found [here]("https://github.com/cnsheafe/react-from-scratch").
 
 ```javascript
 const appConfig = require("config-tsx");
