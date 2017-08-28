@@ -3,16 +3,36 @@ Config-TSX
 
 Generates custom tsconfig.json files for automated use with projects that use Typescript and React. Also useful when building with webpack.
 
+Install
+-
+
+```bash
+npm install --save-dev config-tsx
+mkdir -p app/src/
+touch app/src/index.tsx
+```
+
 Usage
 -
 
 ```javascript
-npm install --save-dev config-tsx
-
 const appConfig = require("config-tsx");
 const appSettings = appConfig.createPaths(__dirname);
 
 appConfig.createTsConfig(__dirname, appSettings["output-dir"]);
+```
+
+For custom paths, specify the ```options``` argument with an object of the following format.
+
+```javascript
+const path = require("path");
+
+const options = {
+    "client-root": "top level folder name containing specified entry(index.tsx)",
+    "entry-file": path.posix.normalize("path/to/entry/file"),
+    "input-dir": path.posix.normalize("path/to/client-root"),
+    "output-dir": path.posix.normalize("path/to/output")
+}
 ```
 
 Example with Webpack
