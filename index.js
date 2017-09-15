@@ -8,13 +8,13 @@ function createPaths(projectRoot, options=undefined) {
         clientRoot = "app";
         options = {
             "client-root": clientRoot,
-            "entry-file": path.posix.normalize(
+            "entry-file": path.normalize(
                 `${projectRoot}/${clientRoot}/src/index.tsx`
             ),
-            "input-dir": path.posix.normalize(
+            "input-dir": path.normalize(
                 `${projectRoot}/${clientRoot}`
             ),
-            "output-dir": path.posix.normalize(
+            "output-dir": path.normalize(
                 `${projectRoot}/${clientRoot}/dist`
             )
         }
@@ -27,7 +27,7 @@ function createPaths(projectRoot, options=undefined) {
 function createTsConfig(projectRoot, outDir) {
 
     const stream = fs.createWriteStream(
-        path.posix.normalize(`${projectRoot}/tsconfig.json`)
+        path.normalize(`${projectRoot}/tsconfig.json`)
     );
 
     const config = JSON.stringify(
@@ -44,7 +44,7 @@ function createTsConfig(projectRoot, outDir) {
                 ]
             },
             exclude: [
-                path.posix.normalize(`${projectRoot}/node_modules`)
+                path.normalize(`${projectRoot}/node_modules`)
             ]
         }
     );
